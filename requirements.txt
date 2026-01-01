@@ -1,0 +1,11 @@
+fastapi
+fastapi.middleware.cors
+uvicorn[standard]
+python-multipart
+pydantic
+requests
+mammoth
+python-docx
+pypdf
+datetime 
+typing
