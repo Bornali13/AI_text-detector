@@ -45,7 +45,7 @@ def sapling_detect(text: str) -> Dict[str, Any]:
     - This is a probabilistic signal, not definitive proof.
     - We cap text length to reduce costs / avoid limits.
     """
-    key = os.getenv("IJHPPAG87HV2DOW7OWNZEH4FGQK032DF")
+    key = os.getenv("SAPLING_API_KEY")
     if not key:
         raise HTTPException(status_code=500, detail="SAPLING_API_KEY is not set (server config).")
 
@@ -302,3 +302,4 @@ def teacher_list(q: Optional[str] = None, course: Optional[str] = None, sort: st
         data.sort(key=lambda s: s["ts"], reverse=True)
 
     return data
+
