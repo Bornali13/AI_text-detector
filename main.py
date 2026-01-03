@@ -17,6 +17,11 @@ app = FastAPI(title="AI Disclosure — MVP API (Sapling)")
 ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "http://127.0.0.1:5173",
+    "http://localhost:5173",
+    "null",
 ]
 
 app.add_middleware(
@@ -302,4 +307,5 @@ def teacher_list(q: Optional[str] = None, course: Optional[str] = None, sort: st
         data.sort(key=lambda s: s["ts"], reverse=True)
 
     return data
+
 
